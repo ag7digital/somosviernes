@@ -1,16 +1,46 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
+import {Montserrat} from 'next/font/google'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+
+export const cardenio = localFont({
+  src:[
+    {
+      path: './fonts/CardenioModern-Bold.otf',
+      weight: '800',
+      style: 'bold'
+    },
+    {
+      path: './fonts/CardenioModern-Regular.otf',
+      weight: '500',
+      style: 'regular'
+    }
+  ],
+  variable: '--font-cardenio'
+})
+
+export const moonGetHeavy = localFont({
+  src:'./fonts/moon_get-Heavy.otf',    
+  variable: '--font-moon'
+})
+
+export const playfullist = localFont({
+  src:'./fonts/Playfulist.otf',    
+  variable: '--font-playfulist'
+})
+
+export const spicyChicken = localFont({
+  src:'./fonts/Spicy_Chicken.otf',    
+  variable: '--font-spicy'
+})
+
+export const montserrat = Montserrat({
   subsets: ["latin"],
-});
+  variable: '--font-montserrat',
+  weight: ['300', '400', '500', '600', '700']
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${cardenio.variable} ${montserrat.variable} ${playfullist.variable} ${spicyChicken.variable} ${moonGetHeavy.variable}`}
       >
         {children}
       </body>

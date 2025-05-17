@@ -1,6 +1,6 @@
 
 export default function Home() {
   return (
-    <h1>Somos Viernes</h1>
+    <h1 className="playfulist">Somos Viernes</h1>
   );
 }
