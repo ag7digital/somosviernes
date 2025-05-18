@@ -1,6 +1,25 @@
+import Image from "next/image";
+import Header from "./components/header";
 
 export default function Home() {
   return (
-    <h1 className="playfulist">Somos Viernes</h1>
+    <>
+      <Header />
+      <div className="relative">
+        <Image
+          src="/images/contamos-historias.png"
+          width={300}
+          height={400}
+          alt=""
+          className="image-reel"
+        />
+        <video preload="auto" autoPlay loop muted>
+          <source
+            src="/videos/Video-Landing-Viernes-EA_.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </>
   );
 }

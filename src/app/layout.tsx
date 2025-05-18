@@ -1,46 +1,44 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
-import {Montserrat} from 'next/font/google'
+import { Montserrat } from "next/font/google";
 
-
-
-export const cardenio = localFont({
-  src:[
+const cardenio = localFont({
+  src: [
     {
-      path: './fonts/CardenioModern-Bold.otf',
-      weight: '800',
-      style: 'bold'
+      path: "./fonts/CardenioModern-Bold.otf",
+      weight: "800",
+      style: "bold",
     },
     {
-      path: './fonts/CardenioModern-Regular.otf',
-      weight: '500',
-      style: 'regular'
-    }
+      path: "./fonts/CardenioModern-Regular.otf",
+      weight: "500",
+      style: "regular",
+    },
   ],
-  variable: '--font-cardenio'
-})
+  variable: "--font-cardenio",
+});
 
-export const moonGetHeavy = localFont({
-  src:'./fonts/moon_get-Heavy.otf',    
-  variable: '--font-moon'
-})
+const moonGetHeavy = localFont({
+  src: "./fonts/moon_get-Heavy.otf",
+  variable: "--font-moon",
+});
 
-export const playfullist = localFont({
-  src:'./fonts/Playfulist.otf',    
-  variable: '--font-playfulist'
-})
+const playfullist = localFont({
+  src: "./fonts/Playfulist.otf",
+  variable: "--font-playfulist",
+});
 
-export const spicyChicken = localFont({
-  src:'./fonts/Spicy_Chicken.otf',    
-  variable: '--font-spicy'
-})
+const spicyChicken = localFont({
+  src: "./fonts/Spicy_Chicken.otf",
+  variable: "--font-spicy",
+});
 
-export const montserrat = Montserrat({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: '--font-montserrat',
-  weight: ['300', '400', '500', '600', '700']
-})
+  variable: "--font-montserrat",
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",

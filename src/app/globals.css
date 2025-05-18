@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fff;
   --foreground: #171717;
+  --green-main: #579e79;
 }
 
 .cardenio {
@@ -23,6 +24,20 @@
 
 .playfulist {
   font-family: var(--font-playfulist);
+}
+
+.tx-green {
+  color: var(--green-main);
+}
+
+.image-reel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
