@@ -40,13 +40,13 @@ export default function Header() {
           width={150}
           height={150}
           alt="Somos Viernes"
-          className="rounded-[50%] ml-2"
+          className="rounded-[50%] ml-2 w-[80px] h-[80px] md:w-[150px] md:h-[150px] lg:w-[150x] lg:h-[150x]"
         />
         {/* Mobile Menu Button */}
         <div className="flex flex-col justify-center mr-5">
           <button
             onClick={toggleMenu}
-            className="hover:text-primary focus:outline-none bg-white rounded-[50%] p-2"
+            className="hover:text-primary focus:outline-none bg-white rounded-[50%] p-2 md:p-4 lg:p-4"
           >
             {isOpen ? <X size={32} /> : <Menu size={32} className="tx-green" />}
           </button>
