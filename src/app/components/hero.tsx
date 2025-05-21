@@ -6,7 +6,7 @@ import { VideoPlayer } from "./video-embed";
 
 export default function Hero() {
   return (
-    <div className="bg-[url(/images/quienes-somos-bg.png)]">
+    <div className="bg-[url(/images/quienes-somos-bg.png)] bg-cover bg-no-repeat bg-center">
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Left column - Video player with custom overlay */}

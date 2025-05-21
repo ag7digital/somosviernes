@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Header from "./components/header";
 import Hero from "./components/hero";
+import Trust from "./components/trust";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         </video>
       </div>
       <Hero />
+      <Trust />
     </>
   );
 }
