@@ -4,12 +4,12 @@ import Image from "next/image";
 
 export default function Trust() {
   return (
-    <div className="flex min-h-screen bg-[url(/images/countries.png)] bg-no-repeat bg-cover">
+    <div className="flex min-h-screen bg-[url(/images/countries.png)] bg-no-repeat bg-center md:bg-cover">
       <div className="max-w-7xl w-full mx-auto py-16 px-4 mt-15">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Left column */}
           <div className="flex justify-start items-start">
-            <p className="montserrat tx-gray text-center md:text-xl mt-10 mr-10">
+            <p className="montserrat tx-gray text-center text-2xl md:text-xl mt-10 mr-10">
               Afortunadamente, durante los últimos 10 años,
               <br />
               nuestro equipo ha apoyado a cientos de profesionales
@@ -21,7 +21,7 @@ export default function Trust() {
             </p>
           </div>
           {/* Right column */}
-          <div className="flex flex-col ">
+          <div className="flex flex-col">
             <Image
               src="/images/counter-projects.png"
               alt="Projetos realizados"
@@ -39,12 +39,12 @@ export default function Trust() {
             height={288}
           />
         </div>
-        <div className="relative w-full h-96 mt-8">
+        <div className="relative w-full h-96">
           <Image
             src="/images/trust-companies.svg"
             alt="Quienes confían en nosotros"
             fill
-            className="object-contain"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 33vw"
           />
         </div>
       </div>

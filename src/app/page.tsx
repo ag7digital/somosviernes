@@ -1,8 +1,11 @@
 import Image from "next/image";
-import Header from "./components/header";
 import Hero from "./components/hero";
 import Trust from "./components/trust";
 import { CurvedTestimonials } from "./components/curved-testimonials";
+import ServicesHome from "./components/services";
+import MotionDesignPower from "./components/motion-design-power";
+import { Button } from "./components/ui/button";
+import Portfolio from "./components/portfolio";
 
 export default function Home() {
   const testimonials = [
@@ -42,7 +45,6 @@ export default function Home() {
 
   return (
     <>
-      <Header />
       <div className="relative">
         <Image
           src="/images/contamos-historias.png"
@@ -65,6 +67,14 @@ export default function Home() {
         autoRotate={true}
         rotationInterval={5000}
       />
+      <ServicesHome />
+      <MotionDesignPower />
+      <div className="flex items-center justify-center my-10">
+        <Button className="cardenio text-white text-5xl py-8 bg-emerald-800 w-[300px]">
+          portafolio
+        </Button>
+      </div>
+      <Portfolio />
     </>
   );
 }

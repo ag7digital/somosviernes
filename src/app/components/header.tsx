@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -35,13 +36,15 @@ export default function Header() {
       }`}
     >
       <div className="flex justify-between">
-        <Image
-          src="/images/Logo-Viernes.png"
-          width={150}
-          height={150}
-          alt="Somos Viernes"
-          className="rounded-[50%] ml-2 w-[80px] h-[80px] md:w-[150px] md:h-[150px] lg:w-[150x] lg:h-[150x]"
-        />
+        <Link href="/">
+          <Image
+            src="/images/Logo-Viernes.png"
+            width={150}
+            height={150}
+            alt="Somos Viernes"
+            className="rounded-[50%] ml-2 w-[80px] h-[80px] md:w-[150px] md:h-[150px] lg:w-[150x] lg:h-[150x]"
+          />
+        </Link>
         {/* Mobile Menu Button */}
         <div className="flex flex-col justify-center mr-5">
           <button

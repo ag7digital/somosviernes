@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import { Montserrat } from "next/font/google";
+import Header from "./components/header";
 
 const cardenio = localFont({
   src: [
@@ -55,6 +56,8 @@ export default function RootLayout({
       <body
         className={`${cardenio.variable} ${montserrat.variable} ${playfullist.variable} ${spicyChicken.variable} ${moonGetHeavy.variable}`}
       >
+        <Header />
+
         {children}
       </body>
     </html>

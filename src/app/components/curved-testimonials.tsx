@@ -118,14 +118,16 @@ export function CurvedTestimonials({
                       <div className="mb-4 text-emerald-500">
                         <Quote className="w-10 h-10 opacity-30" />
                       </div>
-                      <p className="text-gray-700 text-lg mb-4 italic">
+                      <p className="montserrat tx-gray text-lg mb-4">
                         {testimonial.content}
                       </p>
                       <div>
-                        <h4 className="font-bold text-gray-900">
+                        <h4 className="montserrat tx-gray font-bold text-gray-900">
                           {testimonial.name}
                         </h4>
-                        <p className="text-gray-500">{testimonial.role}</p>
+                        <p className="text-gray-500 font-bold">
+                          {testimonial.role}
+                        </p>
                       </div>
                     </div>
                   </div>
