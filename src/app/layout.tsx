@@ -3,6 +3,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import { Montserrat } from "next/font/google";
 import Header from "./components/header";
+import Footer from "./components/footer";
 
 const cardenio = localFont({
   src: [
@@ -59,6 +60,7 @@ export default function RootLayout({
         <Header />
 
         {children}
+        <Footer />
       </body>
     </html>
   );
