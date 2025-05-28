@@ -49,17 +49,26 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-white py-16 px-4">
+    <section className="bg-white py-16 px-4 mt-10">
       <div className="max-w-4xl mx-auto">
         <motion.h2
-          className="cardenio text-[#6D6D6D] text-3xl md:text-4xl font-bold text-center  mb-12"
+          className="playfulist text-[#27964a] text-3xl md:text-4xl font-bold text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          ¿necesita un video?
+          ¿Necesita un video?
         </motion.h2>
+        <motion.h3
+          className="moon tx-gray text-2xl md:text-4xl font-bold tracking-wide text-center mb-16 mt-5"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          Llámese a los de viernes
+        </motion.h3>
 
         <motion.form
           onSubmit={handleSubmit}
@@ -162,18 +171,6 @@ export default function ContactForm() {
             </motion.button>
           </div>
         </motion.form>
-
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="cardenio text-[#6D6D6D] text-2xl md:text-4xl font-bold tracking-wide">
-            llámese a los de viernes
-          </h3>
-        </motion.div>
       </div>
     </section>
   );
