@@ -45,7 +45,7 @@ export default function Footer() {
   return (
     <>
       <ContactForm />
-      <footer className="flex w-full bg-teal-500 text-white py-12 px-4">
+      <footer className="flex items-center sm:items-center sm:justify-center w-full bg-teal-500 text-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="montserrat grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Section - Company Info */}

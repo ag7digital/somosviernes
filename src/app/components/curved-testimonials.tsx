@@ -182,7 +182,7 @@ export function CurvedTestimonials({
       </div>
 
       {/* Curved bottom */}
-      <div className="relative h-16 overflow-hidden">
+      {/* <div className="relative h-16 overflow-hidden">
         <svg
           viewBox="0 0 1440 80"
           fill="none"
@@ -195,7 +195,7 @@ export function CurvedTestimonials({
             fill="#10b981"
           />
         </svg>
-      </div>
+      </div> */}
     </div>
   );
 }

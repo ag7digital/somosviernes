@@ -49,10 +49,10 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-gray-100 py-16 px-4">
+    <section className="bg-white py-16 px-4">
       <div className="max-w-4xl mx-auto">
         <motion.h2
-          className="cardenio tx-gray text-3xl md:text-4xl font-bold text-center  mb-12"
+          className="cardenio text-[#6D6D6D] text-3xl md:text-4xl font-bold text-center  mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -170,7 +170,7 @@ export default function ContactForm() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <h3 className="cardenio tx-gray text-2xl md:text-4xl font-bold tracking-wide">
+          <h3 className="cardenio text-[#6D6D6D] text-2xl md:text-4xl font-bold tracking-wide">
             llámese a los de viernes
           </h3>
         </motion.div>
