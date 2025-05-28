@@ -6,9 +6,9 @@ import { Button } from "../components/ui/button";
 export default function Audio() {
   return (
     <>
-      <div className="flex items-center justify-center w-full bg-[url(/images/bg-header-audio.png)] bg-no-repeat min-h-[50vh]">
+      <div className="flex items-center justify-center w-full bg-[url(/images/bg-header-audio.png)] bg-no-repeat min-h-[50vh] py-8">
         <div className="flex items-center justify-center">
-          <div className="moon text-white text-3xl sm:text-2xl md:text-6xl leading-18 w-[65%] text-center">
+          <div className="moon text-white text-2xl sm:text-4xl md:text-6xl leading-10 md:leading-19 w-[65%] text-center">
             Cada producción es una oportunidad para
             <span className="text-[#a2c791] "> crear</span>, sorprender y
             <span className="text-[#a2c791] "> conectar</span>
@@ -24,7 +24,7 @@ export default function Audio() {
         </p>
       </div>
       <div className="flex items-center justify-center px-10 md:px-30">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-[100%] md:w-[70%] ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-[100%] md:w-[70%] sm:w-[100%]">
           {/** Cuña radial */}
           <div className="flex flex-col h-[300px] justify-around">
             <span className="spicy text-[#3cc6af] text-8xl md:text-5xl">

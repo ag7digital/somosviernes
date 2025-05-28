@@ -49,7 +49,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-white py-16 px-4 mt-10">
+    <section className="bg-white py-16 px-4 mt-20 md:mt-10">
       <div className="max-w-4xl mx-auto">
         <motion.h2
           className="playfulist text-[#27964a] text-3xl md:text-4xl font-bold text-center"
