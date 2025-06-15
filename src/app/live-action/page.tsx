@@ -19,7 +19,7 @@ export default function LiveAction() {
       {/* Header */}
       <div className="flex w-full h-screen">
         <div className="relative w-full h-full">
-          <h1 style={{ display: "hidden" }}>
+          <h1 style={{ display: "hidden", color: "#fff" }}>
             Realizamos cada proyecto con estándares de calidad superior en
             técnica, creatividad y estrategia
           </h1>
