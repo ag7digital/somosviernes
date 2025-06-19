@@ -2,17 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../components/ui/button";
-import { useEffect, useState } from "react";
+import { useIsMobile } from "../hooks/mobile";
 
 export default function LiveAction() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkScreen = () => setIsMobile(window.innerWidth <= 768);
-    checkScreen();
-    window.addEventListener("resize", checkScreen);
-    return () => window.removeEventListener("resize", checkScreen);
-  }, []);
+  const isMobile = useIsMobile();
 
   return (
     <>
