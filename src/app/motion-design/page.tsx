@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { useIsMobile } from "../hooks/mobile";
 import MotionService from "../components/motion-service";
+import MotionServiceMobile from "../components/motion-service-mobile";
 
 export default function Motion() {
   const isMobile = useIsMobile();
@@ -98,69 +99,122 @@ export default function Motion() {
           />
         </div>
       </div>
-      {/* MOTION THERAPY */}
-      <MotionService
-        avatarImg="/images/keep-is-simple-avatar.png"
-        backgroundImage="/images/motion-simple-bg.png"
-        position="L"
-        title="keep it simple"
-        subtitle="motion therapy"
-        services={services.simple}
-        text="El Dr. Arbeláez lo prescribirá cuando identifique un MENSAJE
+      {/* Desktop */}
+      {!isMobile && (
+        <>
+          <MotionService
+            avatarImg="/images/keep-is-simple-avatar.png"
+            backgroundImage="/images/motion-simple-bg.png"
+            position="L"
+            title="keep it simple"
+            subtitle="motion therapy"
+            services={services.simple}
+            text="El Dr. Arbeláez lo prescribirá cuando identifique un MENSAJE
                 simple para transmitir a una gran audiencia con tiempo o
                 presupuesto limitado.<br/><br/>
                 Esta es la mejor opción para CONECTAR con tu público.
                 "
-        videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAEUYE20PyO8yPjFhpGyny6n&si=Ej-7FtAE4FEJAIrw"
-      />
+            videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAEUYE20PyO8yPjFhpGyny6n&si=Ej-7FtAE4FEJAIrw"
+          />
 
-      {/* MAKE IT BETTER */}
-      <MotionService
-        avatarImg="/images/motion-better-avatar.png"
-        backgroundImage="/images/make-it-better-header-bg.png"
-        position="R"
-        title="make it better"
-        subtitle="motion therapy"
-        services={services.better}
-        text="En algunos casos, el Dr. Arbeláez puede diagnosticar que se necesite más esfuerzo y tiempo para transmitir tu MENSAJE, lo que implica incluir personajes simples para desarrollar una NARRATIVA adecuada."
-        videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAEUYE20PyO8yPjFhpGyny6n&si=Ej-7FtAE4FEJAIrw"
-      />
+          <MotionService
+            avatarImg="/images/motion-better-avatar.png"
+            backgroundImage="/images/make-it-better-header-bg.png"
+            position="R"
+            title="make it better"
+            subtitle="motion therapy"
+            services={services.better}
+            text="En algunos casos, el Dr. Arbeláez puede diagnosticar que se necesite más esfuerzo y tiempo para transmitir tu MENSAJE, lo que implica incluir personajes simples para desarrollar una NARRATIVA adecuada."
+            videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAEUYE20PyO8yPjFhpGyny6n&si=Ej-7FtAE4FEJAIrw"
+          />
 
-      {/* GO BEYOND */}
-      <MotionService
-        avatarImg="/images/motion-beyond-avatar.png"
-        backgroundImage="/images/pricing-go-beyond-bg.png"
-        position="L"
-        title="go beyond"
-        subtitle="motion therapy"
-        services={services.better}
-        text="Si el Dr. Arbeláez ha identificado una gran necesidad de CONECTAR con tu audiencia, te habrá recomendado esta terapia. Es importante actuar rápido y programar una reunión de briefing, ya que tenemos unas 7-8 semanas de trabajo por delante. Al final tu audiencia estará CONECTADA con tu MENSAJE, marca o producto/servicio."
-        videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAEHzIRCVzpkhbXVAn-V4hi2&si=AIEhQVEBj3G5FuKw"
-      />
+          <MotionService
+            avatarImg="/images/motion-beyond-avatar.png"
+            backgroundImage="/images/pricing-go-beyond-bg.png"
+            position="L"
+            title="go beyond"
+            subtitle="motion therapy"
+            services={services.better}
+            text="Si el Dr. Arbeláez ha identificado una gran necesidad de CONECTAR con tu audiencia, te habrá recomendado esta terapia. Es importante actuar rápido y programar una reunión de briefing, ya que tenemos unas 7-8 semanas de trabajo por delante. Al final tu audiencia estará CONECTADA con tu MENSAJE, marca o producto/servicio."
+            videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAEHzIRCVzpkhbXVAn-V4hi2&si=AIEhQVEBj3G5FuKw"
+          />
 
-      {/* ZOOM INFINITO */}
-      <MotionService
-        avatarImg="/images/motion-zoom-infinito-avatar.png"
-        backgroundImage="/images/pricing-infinity-zoom-bg.png"
-        position="R"
-        title="zoom"
-        subtitle="infinito"
-        services={services.zoom}
-        text="Crea MENSAJES impactantes con ANIMACIÓN Zoom Infinito, ofreciendo un impacto visual único y COMUNICACIÓN clara. Ideal para MARKETING, redes sociales y presentaciones corporativas."
-        videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAH1wOdheFOgLlx0eMPBJxdg&si=xs8YloGJmcj3cfQ-"
-      />
+          <MotionService
+            avatarImg="/images/motion-zoom-infinito-avatar.png"
+            backgroundImage="/images/pricing-infinity-zoom-bg.png"
+            position="R"
+            title="zoom"
+            subtitle="infinito"
+            services={services.zoom}
+            text="Crea MENSAJES impactantes con ANIMACIÓN Zoom Infinito, ofreciendo un impacto visual único y COMUNICACIÓN clara. Ideal para MARKETING, redes sociales y presentaciones corporativas."
+            videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAH1wOdheFOgLlx0eMPBJxdg&si=xs8YloGJmcj3cfQ-"
+          />
 
-      {/* AVATARES */}
-      <MotionService
-        avatarImg="/images/motion-avatares-avatar.png"
-        backgroundImage="/images/pricing-avatar-bg.png"
-        position="L"
-        title="avatares"
-        subtitle=""
-        services={services.avatares}
-        text="En Viernes Studio creamos avatares personalizados con IA que transforman tu estrategia de COMUNICACIÓN. Estos avatares transmiten tu mensaje de forma dinámica y EFECTIVA, conectando tanto con audiencias internas como externas."
-        videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAEuJKE1UigecDDNPqRkw6K1&si=oN8aZl8qHSBdKcdq"
-      />
+          <MotionService
+            avatarImg="/images/motion-avatares-avatar.png"
+            backgroundImage="/images/pricing-avatar-bg.png"
+            position="L"
+            title="avatares"
+            subtitle=""
+            services={services.avatares}
+            text="En Viernes Studio creamos avatares personalizados con IA que transforman tu estrategia de COMUNICACIÓN. Estos avatares transmiten tu mensaje de forma dinámica y EFECTIVA, conectando tanto con audiencias internas como externas."
+            videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAEuJKE1UigecDDNPqRkw6K1&si=oN8aZl8qHSBdKcdq"
+          />
+        </>
+      )}
+
+      {isMobile && (
+        <>
+          <MotionServiceMobile
+            services={services.simple}
+            title="keep it simple"
+            subtitle="motion therapy"
+            text="El Dr. Arbeláez lo prescribirá cuando identifique un MENSAJE
+                simple para transmitir a una gran audiencia con tiempo o
+                presupuesto limitado.<br/><br/>
+                Esta es la mejor opción para CONECTAR con tu público."
+            videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAEUYE20PyO8yPjFhpGyny6n&si=Ej-7FtAE4FEJAIrw"
+            backgroundImage="/images/value-position-bg.png"
+            backgroundColor="#26974a"
+          />
+          <MotionServiceMobile
+            backgroundImage="/images/team-bg.png"
+            title="make it better"
+            subtitle="motion therapy"
+            services={services.better}
+            text="En algunos casos, el Dr. Arbeláez puede diagnosticar que se necesite más esfuerzo y tiempo para transmitir tu MENSAJE, lo que implica incluir personajes simples para desarrollar una NARRATIVA adecuada."
+            videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAEUYE20PyO8yPjFhpGyny6n&si=Ej-7FtAE4FEJAIrw"
+            backgroundColor="#225e48"
+          />
+          <MotionServiceMobile
+            backgroundImage="/images/value-position-bg.png"
+            title="go beyond"
+            subtitle="motion therapy"
+            services={services.better}
+            text="Si el Dr. Arbeláez ha identificado una gran necesidad de CONECTAR con tu audiencia, te habrá recomendado esta terapia. Es importante actuar rápido y programar una reunión de briefing, ya que tenemos unas 7-8 semanas de trabajo por delante. Al final tu audiencia estará CONECTADA con tu MENSAJE, marca o producto/servicio."
+            videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAEHzIRCVzpkhbXVAn-V4hi2&si=AIEhQVEBj3G5FuKw"
+            backgroundColor="#36a09d"
+          />
+          <MotionServiceMobile
+            backgroundImage="/images/team-bg.png"
+            title="zoom"
+            subtitle="infinito"
+            services={services.zoom}
+            text="Crea MENSAJES impactantes con ANIMACIÓN Zoom Infinito, ofreciendo un impacto visual único y COMUNICACIÓN clara. Ideal para MARKETING, redes sociales y presentaciones corporativas."
+            videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAH1wOdheFOgLlx0eMPBJxdg&si=xs8YloGJmcj3cfQ-"
+            backgroundColor="#ec8c29"
+          />
+          <MotionServiceMobile
+            backgroundImage="/images/pricing-avatar-bg.png"
+            title="avatares"
+            subtitle=""
+            services={services.avatares}
+            text="En Viernes Studio creamos avatares personalizados con IA que transforman tu estrategia de COMUNICACIÓN. Estos avatares transmiten tu mensaje de forma dinámica y EFECTIVA, conectando tanto con audiencias internas como externas."
+            videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAEuJKE1UigecDDNPqRkw6K1&si=oN8aZl8qHSBdKcdq"
+            backgroundColor="#84878d"
+          />
+        </>
+      )}
     </>
   );
 }
