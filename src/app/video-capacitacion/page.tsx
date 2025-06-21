@@ -15,7 +15,7 @@ export default function VideoPromocional() {
     <>
       {/* Header */}
       <div className="flex w-full h-[300px] md:mt-0 md:h-screen">
-        <div className="relative w-full h-full h-[50vh]">
+        <div className="relative w-full h-full">
           <h1 style={{ display: "hidden", color: "#fff" }}>
             Investigamos, experimentamos y diseñamos productos para afrontar
             cada proyecto con pasión y dedicación.

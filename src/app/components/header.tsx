@@ -4,10 +4,13 @@ import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { useIsMobile } from "../hooks/mobile";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,8 +42,8 @@ export default function Header() {
         <Link href="/">
           <Image
             src="/images/Logo-Viernes.png"
-            width={150}
-            height={150}
+            width={isMobile ? 72 : 150}
+            height={isMobile ? 72 : 150}
             alt="Somos Viernes"
             className="rounded-[50%] ml-2 w-[80px] h-[80px] md:w-[150px] md:h-[150px] lg:w-[150x] lg:h-[150x]"
           />

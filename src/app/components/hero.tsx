@@ -24,13 +24,13 @@ export default function Hero() {
               <span className="spicy text-white text-6xl content-center">
                 ¿Conoces el clásico <br />
               </span>
-              <span className="moon text-white text-2xl sm:text-3xl">
+              <span className="moon text-white text-[1.2rem] md:text-3xl content-center">
                 trastorno de comunicación <br />
                 estratégica ausente?
               </span>
             </div>
             <div className="flex mt-8 items-center justify-center">
-              <span className="moon text-2xl md:text-3xl  sm:text-4xl font-bold tx-gray">
+              <span className="moon text-2xl md:text-3xl font-bold tx-gray text-center">
                 No lo decimos nosotros...
               </span>
             </div>

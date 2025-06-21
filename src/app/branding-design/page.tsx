@@ -5,7 +5,7 @@ import React from "react";
 export default function Branding() {
   return (
     <>
-      <div className="flex items-center justify-center w-full bg-[url(/images/bg-branding.png)] bg-no-repeat min-h-[50vh] py-8">
+      <div className="flex items-center justify-center w-full bg-[url(/images/bg-branding.png)] bg-no-repeat h-screen md:min-h-[50vh] py-8">
         <div className="flex items-center justify-center">
           <div className="playfulist text-white text-3xl sm:text-4xl md:text-6xl leading-8 md:leading-19 w-full md:w-[65%] px-10 text-center">
             <span className="text-[#f2b346] ">Investigamos</span>, diseñamos y
@@ -15,10 +15,12 @@ export default function Branding() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center w-full min-h-screen bg-[url(/images/branding-bg-section.png)] bg-no-repeat bg-center bg-cover p-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 w-[80%] gap-8 pt-5">
-          <div className="flex flex-col">
-            <p className="spicy text-white text-8xl">Branding & Design</p>
+      <div className="flex items-center justify-center w-full min-h-screen bg-[url(/images/branding-bg-section.png)] bg-no-repeat bg-center bg-cover py-5 mb-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 w-full md:w-[80%] gap-8 pt-5 pb-10 px-5">
+          <div className="flex flex-col w-full">
+            <p className="spicy text-white text-6xl md:text-8xl">
+              Branding & Design
+            </p>
             <p className="montserrat tx-gray font-bold mt-5">
               Convertimos tu visión en una identidad sólida, que no solo se ve
               bien, sino que proyecta propósito y coherencia.

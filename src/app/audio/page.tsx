@@ -6,7 +6,7 @@ import { Button } from "../components/ui/button";
 export default function Audio() {
   return (
     <>
-      <div className="flex items-center justify-center w-full bg-[url(/images/bg-header-audio.png)] bg-no-repeat min-h-[50vh] py-8">
+      <div className="flex items-center justify-center w-full bg-[url(/images/bg-header-audio.png)] bg-no-repeat md:min-h-[50vh] h-screen py-10">
         <div className="flex items-center justify-center">
           <div className="moon text-white text-2xl sm:text-4xl md:text-6xl leading-10 md:leading-19 w-[65%] text-center">
             Cada producción es una oportunidad para
@@ -19,7 +19,7 @@ export default function Audio() {
         </div>
       </div>
       <div className="flex  items-center justify-center w-full min-h-[60vh] md:min-h-[60vh] bg-[url(/images/audio-bg-types.png)] bg-no-repeat bg-cover">
-        <p className="tx-gray uppercase text-4xl md:text-6xl font-bold">
+        <p className="tx-gray uppercase text-5xl md:text-6xl font-bold">
           audio
         </p>
       </div>
@@ -27,7 +27,7 @@ export default function Audio() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-[100%] md:w-[70%] sm:w-[100%]">
           {/** Cuña radial */}
           <div className="flex flex-col h-[300px] justify-around">
-            <span className="spicy text-[#3cc6af] text-8xl md:text-5xl">
+            <span className="spicy text-[#3cc6af] text-5xl md:text-6xl">
               Cuña Radial
             </span>
             <p className="montserrat tx-gray">
@@ -50,7 +50,7 @@ export default function Audio() {
 
           {/** Podcast */}
           <div className="flex flex-col h-[300px] justify-around">
-            <span className="spicy text-[#3cc6af] text-8xl md:text-5xl">
+            <span className="spicy text-[#3cc6af] text-5xl md:text-6xl">
               Podcast
             </span>
             <p className="montserrat tx-gray">
@@ -73,7 +73,7 @@ export default function Audio() {
 
           {/** Producción Musical IA */}
           <div className="flex flex-col h-[300px] justify-around">
-            <span className="spicy text-[#3cc6af] text-8xl md:text-5xl">
+            <span className="spicy text-[#3cc6af] text-5xl md:text-5xl">
               Producción Musical IA
             </span>
             <p className="montserrat tx-gray">

@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Hero from "./components/hero";
 import Trust from "./components/trust";
@@ -6,8 +7,11 @@ import ServicesHome from "./components/services";
 import MotionDesignPower from "./components/motion-design-power";
 import { Button } from "./components/ui/button";
 import Portfolio from "./components/portfolio";
+import { useIsMobile } from "./hooks/mobile";
 
 export default function Home() {
+  const isMobile = useIsMobile();
+
   const testimonials = [
     {
       id: 1,
@@ -48,7 +52,7 @@ export default function Home() {
       <div className="relative">
         <Image
           src="/images/contamos-historias.png"
-          width={300}
+          width={isMobile ? 150 : 300}
           height={400}
           alt=""
           className="image-reel"

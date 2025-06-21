@@ -1,15 +1,17 @@
 "use client";
 
 import Image from "next/image";
+import { useIsMobile } from "../hooks/mobile";
 
 export default function Trust() {
+  const isMobile = useIsMobile();
   return (
     <div className="flex min-h-screen bg-[url(/images/countries.png)] bg-no-repeat bg-center md:bg-cover">
       <div className="max-w-7xl w-full mx-auto py-16 px-4 mt-15">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Left column */}
           <div className="flex justify-start items-start">
-            <p className="montserrat tx-gray text-center text-2xl md:text-xl mt-10 mr-10">
+            <p className="montserrat tx-gray text-center text-2xl md:text-xl mt-10 mx-10 md:mr-10 ">
               Afortunadamente, durante los últimos 10 años,
               <br />
               nuestro equipo ha apoyado a cientos de profesionales
@@ -39,14 +41,25 @@ export default function Trust() {
             height={288}
           />
         </div>
-        <div className="relative w-full h-96">
-          <Image
-            src="/images/trust-companies.svg"
-            alt="Quienes confían en nosotros"
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 33vw"
-          />
-        </div>
+        {!isMobile ? (
+          <div className="relative w-full h-96">
+            <Image
+              src="/images/trust-companies.svg"
+              alt="Quienes confían en nosotros"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 33vw"
+            />
+          </div>
+        ) : (
+          <div className="relative w-full h-96 mt-10">
+            <Image
+              src="/images/logos-clientes-mobile.svg"
+              alt="Quienes confían en nosotros"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 33vw"
+            />
+          </div>
+        )}
       </div>
     </div>
   );
