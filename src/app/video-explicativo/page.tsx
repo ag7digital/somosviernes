@@ -11,8 +11,8 @@ export default function VideoExplicativo() {
       <div className="flex w-full h-screen">
         <div className="relative w-full h-full">
           <h1 style={{ display: "hidden", color: "#fff" }}>
-            Transmitimos mensajes con guiones y visuales asombrosos que cumplen
-            con los objetivos de comunicación y marketing de nuestros clientes.
+            realizamos cada proyecto con estándares de CALIDAD SUPERIOR en
+            TÉCNICA, CREATIVIDAD, ESTRATEGIA.
           </h1>
           <Image
             src={
