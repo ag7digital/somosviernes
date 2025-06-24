@@ -71,12 +71,12 @@ export default function MenuOverlay() {
           {/* Conteúdo central */}
           <div className="flex flex-col items-center gap-4">
             <div className="flex flex-col items-center text-white text-4xl font-bold space-y-1 mb-6 cardenio">
-              <Link href="blog" className="hover:underline">
+              <a href="blog" className="hover:underline">
                 BLOG
-              </Link>
-              <Link href="#" className="hover:underline">
+              </a>
+              <a href="#" className="hover:underline">
                 WORK
-              </Link>
+              </a>
             </div>
           </div>
           {/* Social Media Icons */}
@@ -97,20 +97,20 @@ export default function MenuOverlay() {
           </div>
           {/* Bandeiras */}
           <div className="flex gap-2">
-            <Link
+            <a
               href="https://es.viernes-studio.com"
               className="flex items-center gap-2 text-white"
             >
               <Globe size={32} />
               LATAM
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://viernes-studio.com"
               className="flex items-center gap-2 text-white"
             >
               <Globe size={32} />
               Global
-            </Link>
+            </a>
           </div>
         </div>
       )}
