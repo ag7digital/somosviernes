@@ -9,9 +9,9 @@ export default function HeaderBlog() {
         backgroundImage: `url(/images/blog-header-bg.png)`,
         backgroundColor: "#10A59E",
       }}
-      className="flex bg-no-repeat bg-cover bg-center md:min-h-[40vh] py-10 bg-blend-soft-light"
+      className="flex md:flex-row flex-col w-full bg-no-repeat bg-cover bg-center md:min-h-[40vh] py-10 bg-blend-soft-light"
     >
-      <div className="flex ml-50">
+      <div className="flex md:ml-50 px-10">
         <div className="flex flex-col">
           <Image
             src="/images/blog-logo.png"
