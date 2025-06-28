@@ -64,6 +64,7 @@ export default function MenuOverlay() {
             className="absolute top-6 right-6 bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-md"
             onClick={toggleMenu}
             aria-label="Fechar menu"
+            type="button"
           >
             <X size={32} className="text-emerald-500 " />
           </button>
@@ -71,14 +72,11 @@ export default function MenuOverlay() {
           {/* Conteúdo central */}
           <div className="flex flex-col items-center gap-4">
             <div className="flex flex-col items-center text-white text-4xl font-bold space-y-1 mb-6 cardenio">
-              <a href="blog" className="hover:underline">
+              <a href="/blog" className="hover:underline">
                 BLOG
               </a>
-              <a href="#" className="hover:underline">
+              <a href="/industrias" className="hover:underline">
                 INDUSTRIAS
-              </a>
-              <a href="#" className="hover:underline">
-                WORK
               </a>
             </div>
           </div>

@@ -13,10 +13,8 @@ function formatDate(dateString: string) {
   });
 }
 
-export async function generateMetadata(
-  { params }: { params: { slug: string } },
-  _parent: ResolvingMetadata,
-): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }, _parent: ResolvingMetadata): Promise<Metadata> {
+  const params = await props.params;
   // Faça fetch dos dados do post, por exemplo:
   const res = await fetch(
     `https://somosviernes.com/wp-json/wp/v2/posts?slug=${params.slug}`,
