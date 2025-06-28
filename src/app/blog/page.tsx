@@ -10,11 +10,24 @@ function getPageFromSearchParams(searchParams: {
   return parseInt(page, 10) || 1;
 }
 
-export default async function Blog({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
+export const metadata = {
+  title: "Blog | Viernes Studio",
+  description:
+    "Este es un espacio donde las ideas, la creatividad y el conocimiento vuelan… ¡Tan alto como nuestro avión!",
+  openGraph: {
+    title: "Blog | Meu Site",
+    description:
+      "Este es un espacio donde las ideas, la creatividad y el conocimiento vuelan… ¡Tan alto como nuestro avión!",
+    url: "https://es.viernes-studio.com/blog",
+    siteName: "Viernes Studio",
+    type: "website",
+  },
+};
+
+export default async function Blog(props: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
+  const searchParams = await props.searchParams;
   const page = getPageFromSearchParams(searchParams);
   const perPage = 9;
   // Busque os posts do WordPress

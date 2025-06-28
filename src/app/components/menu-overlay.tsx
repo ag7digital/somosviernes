@@ -75,6 +75,9 @@ export default function MenuOverlay() {
                 BLOG
               </a>
               <a href="#" className="hover:underline">
+                INDUSTRIAS
+              </a>
+              <a href="#" className="hover:underline">
                 WORK
               </a>
             </div>
