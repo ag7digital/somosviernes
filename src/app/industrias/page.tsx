@@ -35,18 +35,26 @@ export default function Industrias() {
         </div>
       </div>
 
-      <div className="flex w-full h-[100vh] bg-[url(/images/industrias-hero-bg.png)] bg-no-repeat md:bg-cover bg-center py-10 px-10">
-        <div className="flex flex-col justify-center items-center w-[80%]">
-          <p className="montserrat text-white text-2xl text-center md:text-left md:text-4xl font-bold pb-10">
+      <div className="flex w-full md:flex-row flex-col h-auto bg-[url(/images/industrias-hero-bg.png)] bg-no-repeat md:bg-cover bg-center">
+        <div className="flex flex-col justify-center items-center w-full md:w-[50%] md:ml-30 pt-10">
+          <p className="montserrat text-white text-2xl text-center md:text-left md:text-3xl font-bold pb-10">
             TRANSFORMAMOS ideas en contenido AUDIOVISUAL de alto impacto. Nos
             especializamos en la CREACIÓN de videos y piezas adaptadas a las
             necesidades de sectores clave.
           </p>
-          <p className="montserrat text-white text-2xl text-center md:text-left md:text-4xl font-bold pb-10">
+          <p className="montserrat text-white text-2xl text-center md:text-left md:text-2xl font-bold pb-10">
             Desde storytelling cautivador, hasta PRODUCCIÓN técnica
             especializada; desarrollamos CONTENIDO que conecta con tu audiencia
             y refuerza el MENSAJE de tu marca.
           </p>
+        </div>
+        <div className="flex">
+          <Image
+            src="/images/industrias.png"
+            width={1000}
+            height={600}
+            alt="Industries list"
+          />
         </div>
       </div>
     </>
