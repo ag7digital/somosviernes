@@ -21,16 +21,15 @@ export default function Hero() {
           {/* Right column - Content */}
           <div className="flex flex-col items-center">
             <div className="flex flex-col items-center">
-              <span className="spicy text-white text-6xl content-center">
+              <span className="spicy text-white text-5xl md:text-6xl content-center">
                 ¿Conoces el clásico <br />
               </span>
-              <span className="moon text-white text-[1.2rem] md:text-3xl content-center">
-                trastorno de comunicación <br />
-                estratégica ausente?
+              <span className="moon text-white text-[1.2rem] md:text-[1.3rem] text-center uppercase">
+                trastorno de comunicación estratégica ausente?
               </span>
             </div>
             <div className="flex mt-8 items-center justify-center">
-              <span className="moon text-2xl md:text-3xl font-bold tx-gray text-center">
+              <span className="moon text-2xl md:text-3xl font-medium tx-gray text-center">
                 No lo decimos nosotros...
               </span>
             </div>
@@ -45,7 +44,7 @@ export default function Hero() {
 
             <div className="pt-4">
               <Link href="/nosotros">
-                <Button className="moon tx-gray bg-white hover:bg-white/90 text-gray-800 text-3xl font-bold px-10 py-8 rounded-xl cursor-pointer ">
+                <Button className="moon tx-gray bg-white hover:bg-white/90 text-gray-800 text-3xl font-medium px-10 py-8 rounded-xl cursor-pointer ">
                   Nosotros
                 </Button>
               </Link>

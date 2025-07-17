@@ -30,7 +30,7 @@ export default function BlogForm() {
     setIsSubmitting(true);
 
     const portalId = process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID;
-    const formId = process.env.NEXT_PUBLIC_HUBSPOT_FORM_BLOG_ES_ID;
+    const formId = process.env.NEXT_PUBLIC_HUBSPOT_FORM_BLOG_ID;
 
     const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
 

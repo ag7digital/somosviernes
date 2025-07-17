@@ -8,6 +8,7 @@ import MotionDesignPower from "./components/motion-design-power";
 import { Button } from "./components/ui/button";
 import Portfolio from "./components/portfolio";
 import { useIsMobile } from "./hooks/mobile";
+import { Download } from "lucide-react";
 
 export default function Home() {
   const isMobile = useIsMobile();
@@ -47,6 +48,15 @@ export default function Home() {
     },
   ];
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/portfolio/Portafolio-Latam.pdf";
+    link.download = "Portafolio-Latam.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <div className="relative">
@@ -74,7 +84,11 @@ export default function Home() {
       <ServicesHome />
       <MotionDesignPower />
       <div className="flex items-center justify-center my-10">
-        <Button className="cardenio text-white text-5xl py-8 bg-emerald-800 w-[300px]">
+        <Button
+          className="cardenio text-white text-5xl py-8 bg-emerald-800 w-[300px] hover:bg-emerald-800"
+          onClick={handleDownload}
+        >
+          <Download size={64} className="mr-2 h-4 w-4" />
           portafolio
         </Button>
       </div>

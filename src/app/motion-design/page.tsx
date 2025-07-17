@@ -125,7 +125,7 @@ export default function Motion() {
             subtitle="motion therapy"
             services={services.better}
             text="En algunos casos, el Dr. Arbeláez puede diagnosticar que se necesite más esfuerzo y tiempo para transmitir tu MENSAJE, lo que implica incluir personajes simples para desarrollar una NARRATIVA adecuada."
-            videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAEUYE20PyO8yPjFhpGyny6n&si=Ej-7FtAE4FEJAIrw"
+            videoLink="https://youtube.com/playlist?list=PLCBy57mI0AAF6apyphr0Cil1YAVaLdUxt&si=PGZHdQHEo6DZGrhi"
           />
 
           <MotionService
