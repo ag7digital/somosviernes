@@ -6,7 +6,7 @@ export default function Fotografia() {
   return (
     <>
       {/* Header */}
-      <div className="flex flex-col md:flex-row items-center justify-center w-full bg-white min-h-[60vh] py-8 ">
+      <div className="flex flex-col md:flex-row items-center justify-center w-full bg-white min-h-[60vh] py-10 md:w-[90%]">
         <div className="relative w-full aspect-[4/2]">
           <Image
             src="/images/equipo-fotografia-set-big.png"
