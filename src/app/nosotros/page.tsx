@@ -85,7 +85,7 @@ export default function Nosotros() {
       <div className="flex items-center justify-center bg-[url(/images/quienes-somos-propuesta-valor-bg.png)] bg-no-repeat bg-cover bg-center md:min-h-screen py-10">
         <div className="flex items-center justify-center w-[80%]">
           <div className="flex flex-col item-center justify-center w-full md:w-[50%] text-center">
-            <h2 className="moon text-white text-3xl md:text-5xl">
+            <h2 className="moon text-white text-3xl md:text-5xl md:leading-20">
               Propuesta de valor
             </h2>
             <p className="playfulist mt-10 text-[1.4rem] md:text-4xl text-white md:leading-12">
@@ -124,7 +124,7 @@ export default function Nosotros() {
             />
           </div>
           <div className="flex flex-col item-center justify-center w-full md:w-[50%] text-center">
-            <h2 className="moon text-white text-3xl md:text-5xl leading-20">
+            <h2 className="moon text-white text-3xl md:text-5xl md:leading-20">
               Un equipo bien hecho
             </h2>
             <p className="playfulist mt-10 text-[1.4rem] md:text-4xl text-white md:leading-12">

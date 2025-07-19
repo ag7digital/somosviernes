@@ -99,14 +99,14 @@ export default function MenuOverlay() {
           {/* Bandeiras */}
           <div className="flex gap-2">
             <a
-              href="https://es.viernes-studio.com"
+              href="https://latam.viernes-studio.com"
               className="flex items-center gap-2 text-white"
             >
               <Globe size={32} />
               LATAM
             </a>
             <a
-              href="https://viernes-studio.com"
+              href="https://www.viernes-studio.com"
               className="flex items-center gap-2 text-white"
             >
               <Globe size={32} />

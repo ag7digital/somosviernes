@@ -1,6 +1,8 @@
 "use client";
 import { motion } from "motion/react";
 import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
+import { Button } from "./ui/button";
 
 export default function BlogForm() {
   const [formData, setFormData] = useState({
@@ -13,6 +15,7 @@ export default function BlogForm() {
   >("idle");
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -56,6 +59,7 @@ export default function BlogForm() {
       if (res.ok) {
         setStatus("success");
         setIsSubmitting(false);
+        setOpen(true);
 
         // Reset form
         setFormData({
@@ -65,9 +69,11 @@ export default function BlogForm() {
         });
       } else {
         setStatus("error");
+        setOpen(false);
       }
     } catch {
       setStatus("error");
+      setOpen(false);
     }
   };
   return (
@@ -151,6 +157,25 @@ export default function BlogForm() {
           <p className="text-red-600">Erro ao enviar. Tente novamente.</p>
         )}
       </motion.form>
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="max-w-md bg-white border-0 h-auto w-[330px] md:w-auto flex flex-col justify-center items-center">
+          <DialogHeader className="flex items-center">
+            <DialogTitle className="cardenio text-3xl text-emerald-800 ">
+              Recibimos tu contacto!
+            </DialogTitle>
+          </DialogHeader>
+          <div className="py-2 montserrat text-[1.2rem]">
+            Prometemos enviarte solo contenido relevante y útil. Mantente al
+            tanto de nuestras próximas ediciones en tu bandeja de entrada.
+          </div>
+          <Button
+            onClick={() => setOpen(false)}
+            className="cardenio text-3xl py-8 w-[100px] bg-emerald-600 text-white"
+          >
+            Cerrar
+          </Button>
+        </DialogContent>
+      </Dialog>
     </>
   );
 }
