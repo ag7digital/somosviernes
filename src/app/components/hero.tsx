@@ -54,12 +54,12 @@ export default function Hero() {
         {/* Bottom section */}
         <div className="mt-12 md:mt-20 text-center max-w-4xl mx-auto text-white">
           <p className="montserrat tx-gray text-xl md:text-2xl">
-            El Dr. Arbeláez es un experto que atiende en consulta a cientos de
-            profesionales de marketing y comunicación con el clásico{" "}
+            El Dr. Arbeláez aseroa a empresas con 
+            {" "}
             <span className="font-bold">
-              &quot;Trastorno de Comunicación Estratégica Ausente&quot;.
+              &quot;Trastorno de Comunicación Estratégica Ausente&quot;,
             </span>
-            Conozca cómo los ayuda y por qué confían en sus terapias con{" "}
+            {" "}descifrando cada contexto y llevándolo a una estrategia con objetivos reales{" "}
             <span className="font-bold">VIERNES STUDIO</span>.
           </p>
         </div>
