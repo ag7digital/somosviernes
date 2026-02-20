@@ -54,7 +54,7 @@ export default function Hero() {
         {/* Bottom section */}
         <div className="mt-12 md:mt-20 text-center max-w-4xl mx-auto text-white">
           <p className="montserrat tx-gray text-xl md:text-2xl">
-            El Dr. Arbeláez aseroa a empresas con 
+            El Dr. Arbeláez asesora a empresas con 
             {" "}
             <span className="font-bold">
               &quot;Trastorno de Comunicación Estratégica Ausente&quot;,
