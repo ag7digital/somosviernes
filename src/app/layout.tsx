@@ -46,6 +46,31 @@ export const metadata: Metadata = {
   title: "Viernes Studio",
   description:
     "Vídeos Corporativos | Producción audiovisual, videos institucionales, videos para empresas, mercadeo, marketing, coworking, multimedia, interactividad",
+  metadataBase: new URL("https://latam.viernes-studio.com"),
+  openGraph: {
+    title: "Viernes Studio",
+    description:
+      "Producción audiovisual para empresas en Latam. Videos corporativos, institucionales y comerciales con enfoque estratégico.",
+    url: "https://latam.viernes-studio.com",
+    siteName: "Viernes Studio",
+    locale: "es_LA",
+    type: "website",
+    images: [
+      {
+        url: "/images/Logo-Viernes.png",
+        width: 1230,
+        height: 1230,
+        alt: "Logo de Viernes Studio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Viernes Studio",
+    description:
+      "Producción audiovisual para empresas en Latam. Videos corporativos, institucionales y comerciales con enfoque estratégico.",
+    images: ["/images/Logo-Viernes.png"],
+  },
 };
 
 export default function RootLayout({
