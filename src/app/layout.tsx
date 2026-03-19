@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { Montserrat } from "next/font/google";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import WhatsAppFloatingButton from "./components/whatsapp-floating-button";
 
 const cardenio = localFont({
   src: [
@@ -87,6 +88,7 @@ export default function RootLayout({
 
         {children}
         <Footer />
+        <WhatsAppFloatingButton />
       </body>
     </html>
   );
