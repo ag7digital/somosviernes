@@ -17,6 +17,15 @@ export default function BlogForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [open, setOpen] = useState(false);
 
+  const getSafePageUri = () => {
+    try {
+      const url = new URL(window.location.href);
+      return `${url.origin}${url.pathname}`;
+    } catch {
+      return window.location.origin;
+    }
+  };
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -30,12 +39,20 @@ export default function BlogForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setStatus("loading");
     setIsSubmitting(true);
 
     const portalId = process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID;
     const formId = process.env.NEXT_PUBLIC_HUBSPOT_FORM_BLOG_ID;
 
-    const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
+    if (!portalId || !formId) {
+      setStatus("error");
+      setOpen(false);
+      setIsSubmitting(false);
+      return;
+    }
+
+    const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${encodeURIComponent(portalId)}/${encodeURIComponent(formId)}`;
 
     try {
       const res = await fetch(endpoint, {
@@ -50,7 +67,7 @@ export default function BlogForm() {
             { objectTypeId: "0-1", name: "company", value: formData.empresa },
           ],
           context: {
-            pageUri: window.location.href,
+            pageUri: getSafePageUri(),
             pageName: document.title,
           },
         }),
@@ -58,7 +75,6 @@ export default function BlogForm() {
 
       if (res.ok) {
         setStatus("success");
-        setIsSubmitting(false);
         setOpen(true);
 
         // Reset form
@@ -74,6 +90,8 @@ export default function BlogForm() {
     } catch {
       setStatus("error");
       setOpen(false);
+    } finally {
+      setIsSubmitting(false);
     }
   };
   return (

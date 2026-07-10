@@ -1,13 +1,19 @@
 import BlogList from "../components/blog-list";
 import HeaderBlog from "../components/header-blog";
 
+const MAX_PAGE = 100;
+
 function getPageFromSearchParams(searchParams: {
   [key: string]: string | string[] | undefined;
 }) {
   const page = searchParams?.page;
   if (!page) return 1;
-  if (Array.isArray(page)) return parseInt(page[0], 10) || 1;
-  return parseInt(page, 10) || 1;
+
+  const raw = Array.isArray(page) ? page[0] : page;
+  const parsed = Number.parseInt(raw, 10);
+
+  if (!Number.isFinite(parsed)) return 1;
+  return Math.min(MAX_PAGE, Math.max(1, parsed));
 }
 
 export const metadata = {
@@ -30,16 +36,35 @@ export default async function Blog(props: {
   const searchParams = await props.searchParams;
   const page = getPageFromSearchParams(searchParams);
   const perPage = 9;
-  // Busque os posts do WordPress
+  const params = new URLSearchParams({
+    per_page: String(perPage),
+    page: String(page),
+    order: "desc",
+    orderby: "date",
+    _embed: "1",
+    status: "publish",
+  });
+
   const res = await fetch(
-    `https://somosviernes.com/wp-json/wp/v2/posts?per_page=${perPage}&page=${page}&order=desc&orderby=date&_embed&status=publish`,
+    `https://somosviernes.com/wp-json/wp/v2/posts?${params.toString()}`,
     {
       cache: "no-store",
     },
   );
 
-  // Parse headers para saber total de páginas
-  const totalPages = Number(res.headers.get("x-wp-totalpages") || 1);
+  if (!res.ok) {
+    return (
+      <>
+        <HeaderBlog />
+        <BlogList posts={[]} page={1} totalPages={1} />
+      </>
+    );
+  }
+
+  const totalPages = Math.max(
+    1,
+    Number.parseInt(res.headers.get("x-wp-totalpages") || "1", 10) || 1,
+  );
 
   const posts = await res.json();
   return (
