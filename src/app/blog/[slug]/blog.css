@@ -1,57 +1,117 @@
-#post_content {
-  figure {
-    img {
-      width: 100%;
-      margin-bottom: 2rem;
-    }
-  }
+#post_content figure img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
 
-  p {
-    font-family: var(--font-montserrat);
-    color: var(--gray-text);
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+#post_content p {
+  font-family: var(--font-montserrat);
+  color: var(--gray-text);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-  h2 {
-    font-size: 2rem;
-    font-family: var(--font-cardenio);
-    color: #777777;
-  }
+#post_content h2 {
+  font-size: 2rem;
+  font-family: var(--font-cardenio);
+  color: #777777;
+}
 
-  ul {
-    font-family: var(--font-montserrat);
-    color: var(--gray-text);
+#post_content ul,
+#post_content ol {
+  font-family: var(--font-montserrat);
+  color: var(--gray-text);
+  list-style-type: disc;
+}
 
-    list-style-type: disc;
+#post_content ul li,
+#post_content ol li {
+  margin-left: 1rem;
+}
 
-    li {
-      margin-left: 1rem;
-    }
-  }
+#post_content h3 {
+  font-size: 1.5rem;
+  font-family: var(--font-cardenio);
+  color: var(--gray-text);
+  margin: 1rem 0 1rem 0;
+}
 
-  ol {
-    font-family: var(--font-montserrat);
-    color: var(--gray-text);
+#post_content h4 {
+  font-size: 1rem;
+  font-family: var(--font-montserrat);
+  color: var(--gray-text);
+  margin: 1rem 0 1rem 0;
+}
 
-    list-style-type: disc;
+/*
+  Target columns directly instead of specific container numbers
+*/
+#post_content .wp-block-columns,
+#post_content [class*="wp-container-"].wp-block-columns {
+  display: flex;
+  gap: 2em;
+  flex-wrap: nowrap;
+  align-items: center;
+}
 
-    li {
-      margin-left: 1rem;
-    }
-  }
+#post_content .wp-block-columns > *,
+#post_content [class*="wp-container-"].wp-block-columns > * {
+  margin: 0;
+}
 
-  h3 {
-    font-size: 1.5rem;
-    font-family: var(--font-cardenio);
-    color: var(--gray-text);
-    margin: 1rem 0 1rem 0;
-  }
+/*
+  Target all wp-containers for alignments instead of hardcoding -2, -3, -5, etc.
+*/
+#post_content [class*="wp-container-"] > .alignleft,
+#post_content .alignleft {
+  float: left;
+  margin-inline-start: 0;
+  margin-inline-end: 2em;
+}
 
-  h4 {
-    font-size: 1rem;
-    font-family: var(--font-montserrat);
-    color: var(--gray-text);
-    margin: 1rem 0 1rem 0;
-  }
+#post_content [class*="wp-container-"] > .alignright,
+#post_content .alignright {
+  float: right;
+  margin-inline-start: 2em;
+  margin-inline-end: 0;
+}
+
+#post_content [class*="wp-container-"] > .aligncenter,
+#post_content .aligncenter {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#post_content pre.wp-block-verse {
+  font-family: var(--font-cardenio);
+  color: var(--gray-text);
+  font-style: italic;
+  font-size: 1.5rem;
+  margin: 1rem 0 1rem 0;
+}
+
+/* Container styles for the blockquote */
+#post_content blockquote.wp-block-quote {
+  margin: 2rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--gray-text); /* Or whatever accent color you use */
+  background-color: #f9f9f9; /* Optional background */
+  font-style: italic;
+}
+
+/* Reset the paragraph styling inside the blockquote so it blends in */
+#post_content blockquote.wp-block-quote p {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-cardenio);
+  color: #777777;
+  font-size: 1.5rem; /* Slightly larger for quotes */
+}
+
+/* If the blockquote has a cite/author tag */
+#post_content blockquote.wp-block-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: bold;
 }

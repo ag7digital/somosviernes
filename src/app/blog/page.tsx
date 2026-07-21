@@ -24,7 +24,7 @@ export const metadata = {
     title: "Blog | Meu Site",
     description:
       "Este es un espacio donde las ideas, la creatividad y el conocimiento vuelan… ¡Tan alto como nuestro avión!",
-    url: "https://es.viernes-studio.com/blog",
+    url: "https://latam.viernes-studio.com/blog",
     siteName: "Viernes Studio",
     type: "website",
   },
