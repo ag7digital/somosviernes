@@ -63,8 +63,6 @@ export default function Footer() {
               <div className="space-y-3 text-lg">
                 <p className="flex flex-wrap items-center gap-2">
                   <span>+57 323 429 8122</span>
-                  <span className="text-white/70">|</span>
-                  <span>+57 310 402 7769</span>
                 </p>
                 <p>Palmira - Colombia</p>
                 <p>
